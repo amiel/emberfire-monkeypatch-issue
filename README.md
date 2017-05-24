@@ -17,36 +17,20 @@ You will need the following things properly installed on your computer.
 
 * `git clone <repository-url>` this repository
 * `cd emberfire-monkeypatch-issue`
-* `npm install`
+* `yarn install`
 * `bower install`
 
-## Running / Development
+## Testing the example
 
 * `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+* Visit at [http://localhost:4200](http://localhost:4200).
+* Open the development console
+* Click on the "Create a comment" button
+* Notice error in the development console
 
-### Code Generators
+## Exaplanation
 
-Make use of the many generators for code, try `ember help generate` for more details
+This issue occurs when a project including emberfire, and has a response to creating or updating a record that has an `included` section. I'm not actually sure if this is possible for models using the `FirebaseAdapter`. We ran in to this issue with a model that does not use `FirebaseAdapter`.
 
-### Running Tests
+Example data can be found in the [comment adapter](https://github.com/amiel/emberfire-monkeypatch-issue/blob/master/app/adapters/comment.js#L13-L38).
 
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
