@@ -1,9 +1,9 @@
 import Ember from 'ember';
-import ApplicationAdapter from './application';
+import DS from 'ember-data';
 
 const { RSVP: { resolve } } = Ember;
 
-export default ApplicationAdapter.extend({
+export default DS.JSONAPIAdapter.extend({
   findAll() {
     return resolve({
       data: [],
