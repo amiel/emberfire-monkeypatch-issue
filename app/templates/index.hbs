@@ -1,0 +1,12 @@
+<h1>Comments</h1>
+
+<button {{action 'createComment'}}>Create a comment</button>
+
+{{#each model as |comment|}}
+  <div>
+    <p>{{comment.message}}</p>
+    - {{comment.author.name}}
+  </div>
+{{/each}}
+
+{{outlet}}
